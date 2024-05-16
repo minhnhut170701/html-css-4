@@ -5,8 +5,8 @@
 }
 
 :root{
-    --head-color: #2D314D;
-    --content-color: #9597A5;
+    --head-color: rgb(45, 49, 77);
+    --content-color: rgb(149, 151, 165);
     --liner-bg-1: #33D35E;
     --liner-bg-2: #2AB6D9;
 }
@@ -16,6 +16,10 @@ body{
     font-family: "Public Sans", sans-serif;
     font-size: 18px;
     overflow-x: hidden;
+}
+
+body.overFlow{
+    overflow-y: hidden;
 }
 
 ul li{
@@ -87,8 +91,6 @@ ul li{
     background-position: 10% 70%;;
 }
 
-
-
 .banner-right .banner-img{
   position: absolute;
   top: 40%;
@@ -99,7 +101,6 @@ ul li{
 
 .banner-left{
     width: 40%;
-  
 }
 
 .banner-left{
@@ -306,6 +307,7 @@ ul li{
         gap: 0;
         height: 100%;
         padding-left: 0;
+        margin-top: 0;
        
     }
 
@@ -316,19 +318,27 @@ ul li{
 
     .menu-mb{
         position: absolute;
-        top: 98px;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 96px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(45, 49, 77, 0.5), rgba(149, 151, 165, 0.5));
+        height: 100vh;
+        padding:0 24px;
     }
 
     .menu-mb__list{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
         flex-direction: column;
         gap: 13px;
         width: 100%;
+        max-width: 327px;
         align-items: center;
         background-color: #fff;
-        padding: 32px 131px;
+        padding: 32px 0;
        
     }
 
